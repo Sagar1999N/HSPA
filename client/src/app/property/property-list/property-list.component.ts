@@ -1,3 +1,6 @@
+import { ActivatedRoute, Router } from '@Angular/router';
+import { IProperty } from '../IProperty.interface';
+import { HousingService } from './../../services/housing.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,66 +9,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./property-list.component.css']
 })
 export class PropertyListComponent implements OnInit{
-  constructor(){}
+  SellRent = 1;
+  
+  properties: Array<IProperty> = [];
+
+  constructor(private route: ActivatedRoute, private HousingService: HousingService){}
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }    
-  
-  properties: Array<any> = [
-    {
-      "Id":1,
-      "Type":"House",
-      "Name":"Birla House",
-      "Price":12000
-    },
-    {
-      "Id":2,
-      "Type":"House",
-      "Name":"A House",
-      "Price":12000
-    },
-    {
-      "Id":3,
-      "Type":"House",
-      "Name":"B House",
-      "Price":12000
-    },
-    {
-      "Id":4,
-      "Type":"House",
-      "Name":"C House",
-      "Price":12000
-    },
-    {
-      "Id":5,
-      "Type":"House",
-      "Name":"D House",
-      "Price":12000
-    },
-    {
-      "Id":6,
-      "Type":"House",
-      "Name":"E House",
-      "Price":12000
-    },
-    {
-      "Id":7,
-      "Type":"House",
-      "Name":"F House",
-      "Price":12000
-    },
-    {
-      "Id":8,
-      "Type":"House",
-      "Name":"G House",
-      "Price":12000
-    },
-    {
-      "Id":9,
-      "Type":"House",
-      "Name":"H House",
-      "Price":12000
+    if(this.route.snapshot.url.toString()){
+      this.SellRent = 2;
     }
-  ]
+    this.HousingService.getAllProperties(this.SellRent).subscribe(
+      data=>{
+        this.properties = data;
+        console.log(data);
+        console.log(this.route.snapshot.url.toString())
+      },error => {
+        console.log("httperror: ");
+        console.log(error);
+      }
+    )
+  }    
 }

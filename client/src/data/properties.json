@@ -1,0 +1,81 @@
+[
+    {
+      "Id":1,
+      "SellRent": 1,
+      "Type":"House",
+      "Name":"Birla House",
+      "Price":12000,
+      "Image":"prop-1"
+    },
+    {
+      "Id":2,
+      "SellRent": 1,
+      "Type":"House",
+      "Name":"A House",
+      "Price":12000,
+      "Image":"prop-2"
+    },
+    {
+      "Id":3,
+      "SellRent": 2,
+      "Type":"House",
+      "Name":"B House",
+      "Price":12000,
+      "Image":"prop-3"
+    },
+    {
+      "Id":4,
+      "SellRent": 2,
+      "Type":"House",
+      "Name":"C House",
+      "Price":12000,
+      "Image":"prop-4"
+    },
+    {
+      "Id":5,
+      "SellRent": 1,
+      "Type":"House",
+      "Name":"D House",
+      "Price":12000,
+      "Image":"prop-5"
+    },
+    {
+      "Id":6,
+      "SellRent": 2,
+      "Type":"House",
+      "Name":"E House",
+      "Price":12000,
+      "Image":"prop-6"
+    },
+    {
+      "Id":7,
+      "SellRent": 1,
+      "Type":"House",
+      "Name":"F House",
+      "Price":12000,
+      "Image":"prop-7"
+    },
+    {
+      "Id":8,
+      "SellRent": 1,
+      "Type":"House",
+      "Name":"G House",
+      "Price":12000,
+      "Image":"prop-8"
+    },
+    {
+      "Id":9,
+      "SellRent": 2,
+      "Type":"House",
+      "Name":"H House",
+      "Price":12000,
+      "Image":"prop-9"
+    },
+    {
+      "Id":10,
+      "SellRent": 2,
+      "Type":"House",
+      "Name":"I House",
+      "Price":12000
+     }
+  ]
